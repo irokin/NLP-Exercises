@@ -11,13 +11,17 @@ class Encoder(tf.keras.layers.Layer):
         your code
         """
         self.embedding = tf.keras.layers.Embedding(vocab_size, embedding_dim,
-                                                   embeddings_initializer=tf.keras.initializers.Constant(embedding_matrix),
+                                                   embeddings_initializer=tf.keras.
+                                                   initializers.Constant(embedding_matrix),
                                                    trainable=False)
         """
         定义单向的RNN、GRU、LSTM层
         your code
         """
-        self.gru = tf.keras.layers.GRU(self.enc_units, return_state=True, return_sequences=True)
+        self.gru = tf.keras.layers.GRU(self.enc_units, 
+                                       return_state=True, 
+                                       return_sequences=True,
+                                       recurrent_initializer='glorot_uniform')
         self.bigru = tf.keras.layers.Bidirectional(self.gru, merge_mode='concat')
 
     def call(self, x, hidden):

@@ -49,14 +49,18 @@ class Decoder(tf.keras.layers.Layer):
         your code
         """
         self.embedding = tf.keras.layers.Embedding(vocab_size, embedding_dim,
-                                                   embeddings_initializer=tf.keras.initializers.Constant(embedding_matrix),
+                                                   embeddings_initializer=tf.keras.
+                                                   initializers.Constant(embedding_matrix),
                                                    trainable=False)
         """
         定义单向的RNN、GRU、LSTM层
         your code
         """
         # self.dropout = tf.keras.layers.Dropout(0.5)
-        self.gru = tf.keras.layers.GRU(self.dec_units, return_sequences=True, return_state=True)
+        self.gru = tf.keras.layers.GRU(self.dec_units,
+                                       return_sequences=True,
+                                       return_state=True,
+                                       recurrent_initializer='glorot_uniform')
         """
         定义最后的fc层，用于预测词的概率
         your code
