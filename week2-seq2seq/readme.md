@@ -1,3 +1,3 @@
 # seq2seq
 
-A Tensorflow2 implementation of seq2seq model. Discussions to be added. 
+A tensorflow2 implementation of seq2seq model. Discussions to be added. 
