@@ -1,6 +1,6 @@
 # NLP Exercises
 
-This repository contains a series hands-on NLP projects. 
+This repository contains a series of hands-on NLP projects. 
 
 # Table of Contents
 
