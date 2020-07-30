@@ -9,8 +9,8 @@ This repository contains a series of hands-on NLP projects.
     Use gensim's word2vec implementation to build word embeddings.
 - [Week2 - seq2seq](https://github.com/irokin/NLP-Exercises/tree/master/week2-seq2seq)
 
-    A Tensorflow 2 seq2seq implementation that features:
+    A Tensorflow2 seq2seq implementation that features:
     -  A bidirectional GRU encoder
-    -  A Bahdanua attention layer
+    -  A Bahdanau attention layer
 
 
